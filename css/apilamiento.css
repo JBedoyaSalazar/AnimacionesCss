@@ -1,0 +1,296 @@
+:root{
+    --colorBackground: #ccefff;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
+}
+
+.phone{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background-color: var(--colorBackground);
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+h1{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.totalCount::after{
+    content: counter(score);
+}
+
+.layer1{
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    inset-block-end: 4px;
+    inset-inline-end: 60px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes layer{
+
+    0%{
+        inset-block-end: 4px;
+    }
+
+    50%{
+        inset-block-end: -80px;
+    }
+
+    100%{
+        inset-block-end: 4px;
+    }
+}
+
+.layer1 input[type=checkbox]:focus{
+    appearance: none;
+    outline: none;
+}
+
+input:checked{
+    counter-increment: score;
+}
+
+.layer2{
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    inset-block-end: 0;
+    inset-inline-start: 60px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.layer3{
+    position: absolute;
+    z-index: 3;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 400px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.layer4{
+    position: absolute;
+    z-index: 4;
+    height: 300px;
+    width: 80px;
+    inset-block-end: 0;
+    inset-inline-start: 30px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.layer5{
+    position: absolute;
+    z-index: 5;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 250px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.layer6{
+    position: absolute;
+    z-index: 6;
+    height: 180px;
+    width: 80px;
+    inset-block-end: 0;
+    inset-inline-end: 30px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.layer7{
+    position: absolute;
+    z-index: 7;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 140px;
+    height: 150px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(30deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(150deg, #837451 12%, transparent 12.5%, transparent 87%, #837451 87.5%, #837451), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177), linear-gradient(60deg, #83745177 25%, transparent 25.5%, transparent 75%, #83745177 75%, #83745177);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.layer8{
+    position: absolute;
+    z-index: 8;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    border: 2px solid black;
+}
+
+.layer9{
+    position: absolute;
+    z-index: 9;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 120px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.layer10{
+    position: absolute;
+    z-index: 10;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    margin: 0 auto;
+    width: 120px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.leftEarOuter{
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    inset-inline-start: 10px;
+}
+
+.leftEarInner{
+    background-color: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    inset-inline-start: 15px;
+    inset-block-start: 8px;
+}
+
+.rightEarOuter{
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    inset-inline-end: 10px;
+}
+
+.rightEarInner{
+    background-color: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    inset-inline-end: 15px;
+    inset-block-start: 8px;
+}
+
+.head{
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    margin: 0 auto;
+    position: absolute;
+    inset-block-start: 30px;
+    width: 100%;
+}
+
+.headeye{
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    inset-block-start: 10px ;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+
+    5%{
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+
+    10%{
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
+}
+
+.headeyeLeft{
+    inset-inline-start: 30px;
+}
+
+.headeyeRight{
+    inset-inline-end: 30px;
+}
+
+.pattern{
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(circle at center center, #444cf7, #e5e5f7), repeating-radial-gradient(circle at center center, #444cf7, #444cf7, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
+}
